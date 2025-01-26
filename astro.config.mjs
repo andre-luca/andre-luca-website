@@ -8,5 +8,5 @@ export default defineConfig({
       plugins: [tailwindcss()],
     },
     site: 'https://andre-luca.github.io',
-    base: '/AL-WEBSITE',
+    base: '/',
   });
