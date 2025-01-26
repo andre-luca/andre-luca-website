@@ -7,4 +7,6 @@ export default defineConfig({
     vite: {
       plugins: [tailwindcss()],
     },
+    site: 'https://andre-luca.github.io',
+    base: 'andre-luca-website',
   });
