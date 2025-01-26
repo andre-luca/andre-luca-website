@@ -1,0 +1,70 @@
+---
+import astroLogo from "../assets/astro.svg";
+import background from "../assets/background.svg";
+import { Observer } from "tailwindcss-intersect";
+import "../styles/global.css";
+---
+
+<script>
+  // Move the Observer initialization here
+  import { Observer } from "tailwindcss-intersect";
+  Observer.start();
+</script>
+
+<main
+  class="container my-8 flex justify-between items-center mx-auto motion-opacity-in-0 motion-blur-in-md motion-delay-0"
+>
+  <div class="flex items-center">
+    <figure class="mr-4">
+      <svg
+        id="Ebene_1"
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        viewBox="0 0 1110.79 1420.83"
+        class="fill-slate-50 w-10"
+      >
+        <defs>
+          <style>
+            .st0 {
+            }
+          </style>
+        </defs>
+        <path
+          class="st0"
+          d="M1110.79 1064.75H903.05l-118.09-222.1h153.45c33.41 0 64.1 18.44 79.78 47.94l92.6 174.16Z"
+        ></path>
+        <path
+          class="st0"
+          d="M784.96 842.65H631.51c-33.41 0-64.1-18.44-79.78-47.94l-73.61-138.43c-11.33-21.31-41.86-21.31-53.19 0l-217.19 408.46H0l342.82-644.73c20.91-39.34 61.82-63.92 106.37-63.92h4.68c44.55 0 85.46 24.59 106.37 63.92l224.72 422.64Z"
+        ></path>
+      </svg>
+    </figure>
+    <!-- <h3 class="text-lime-300">André Luca</h3> -->
+  </div>
+  <div class="">
+    <a
+      href="https://dribbble.com/andreluca17"
+      class="flex justify-center relative px-4 py-2 gap-1 text-gray-900 rounded-full items-center group"
+    >
+      <span
+        class="bg-lime-300 absolute inset-0 rounded-full group-hover:scale-110 transition-transform duration-300 origin-center"
+      ></span>
+      <p class="relative">Dribbble</p>
+      <figure class="relative">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          class="size-3.5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"></path>
+        </svg>
+      </figure>
+    </a>
+  </div>
+</main>
