@@ -41,31 +41,71 @@ import "../styles/global.css";
     </figure>
     <!-- <h3 class="text-lime-300">André Luca</h3> -->
   </div>
-  <div class="">
+
+  <div
+    class="relative group inline-flex items-center"
+    x-data="{ hover: false }"
+    x-on:mouseenter="hover = true"
+    x-on:mouseleave="hover = false"
+  >
+    <svg
+      width="0"
+      height="0"
+      class="absolute hidden"
+      color-interpolation-filters="sRGB"
+    >
+      <defs>
+        <filter id="buttonFilter">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"
+          ></feGaussianBlur>
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+            result="buttonFilter"></feColorMatrix>
+          <feComposite in="SourceGraphic" in2="buttonFilter" operator="atop"
+          ></feComposite>
+          <feBlend in="SourceGraphic" in2="buttonFilter"></feBlend>
+        </filter>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="flex group" style="filter: url(#buttonFilter);">
     <a
-      href="https://dribbble.com/andreluca17"
-      class="flex justify-center relative px-4 py-2 gap-1 text-gray-900 rounded-full items-center group"
+      href="mailto:hey@andreluca.de"
+      class="flex justify-center relative px-4 py-2 text-gray-900 rounded-full items-center"
     >
       <span
-        class="bg-lime-300 absolute inset-0 rounded-full group-hover:scale-110 transition-transform duration-300 origin-center"
-      ></span>
+        class="bg-lime-300 absolute inset-0 rounded-full transition-transform duration-300 origin-center"
+      >
+      </span>
       <p class="relative">Contact me</p>
-      <figure class="relative">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-5"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 0 1-.923 1.785A5.969 5.969 0 0 0 6 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337Z"
-          ></path>
-        </svg>
-      </figure>
+    </a>
+    <a
+      href="mailto:hey@andreluca.de"
+      class="flex justify-center relative p-2 text-gray-900 rounded-full items-center aspect-square"
+    >
+      <span
+        class="bg-lime-300 absolute flex justify-center items-center inset-0 group-hover:motion-preset-wobble rounded-full h-10 w-10 transition-transform duration-300 origin-center"
+      >
+        <figure class="relative">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 0 1-.923 1.785A5.969 5.969 0 0 0 6 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337Z"
+            ></path>
+          </svg>
+        </figure>
+      </span>
     </a>
   </div>
 </main>
